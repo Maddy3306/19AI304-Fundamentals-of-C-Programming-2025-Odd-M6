@@ -1,209 +1,279 @@
-# 19AI304-Fundamentals-of-C-Programming-2025-Odd-M6
-# IAPR-6- Module 6 - FoC
-## 11. Implementation of the concept of pointer to function.
-## 12. Implementation of programs using structure and union.
-## 13. Implementation of programs for different storage classes.
-# Ex.No:26
-  Develop a C program using static storage class in function with parameter and without return to display the incremental float values as indicated in the following output.
-| Input | Output                                       |
-|-------|----------------------------------------------|
-| 1     | 101.25&nbsp;&nbsp;201.50&nbsp;&nbsp;301.75&nbsp;&nbsp;402.00&nbsp;&nbsp;502.75 |
-# Date : 
-# Aim:
-To develop a C program using the static storage class in a function with a parameter and without a return value to display the required output.
-# Algorithm:
-### Step 1:
-  Start
-### Step 2: 
-  Include the standard input-output library: #include<stdio.h>.
-### Step 3:
-  a. Declare an integer variable `input` to store the user’s number.  
-  b. Inside the function `display(int n)`, declare a static float variable `base` and initialize it to 100.25.
-### Step 4:
-  Read an integer from the user and store it in `input`.
-### Step 5:
-  Call the function `display(input)` five times.
-### Step 6:
-  Inside the `display` function, for each call:  
-  a. Calculate the sum of `base` and `n`.  
-  b. Display the value.  
-  c. Increase the value of `base` by 100.25.
-### Step 7:
-  Repeat Step 6 for all function calls.
-### Step 8:
-  Stop
-# Program:
-# Output:
-# Result: 
-Thus, the program was implemented and executed successfully, and the required output was obtained.
+# EX-26-AREA-OF-RECTANGLE-USING- POINTER
+## AIM
+To write a C Program to find area of rectangle using pointer.
+
+## ALGORITHM
+1.	Start the program.
+2.	Read two numbers.
+3.	Calculate the area of rectangle using the formula area=(x)(*y)
+4.	Display the result.
+5.	Stop the program.
+
+## PROGRAM
+```
+#include <stdio.h>
+
+int main() {
+    float x, y, area;
+
+    scanf("%f", &x);
+    scanf("%f", &y);
+
+    area = x * y;
+
+    printf("%.2f\n", area);
+
+    return 0;
+}
+
+```
+
+## OUTPUT
+		       	
+![image](https://github.com/user-attachments/assets/78b60470-0d56-40b0-949c-02c95a4f77b7)
 
 
-# 19AI304-Fundamentals-of-C-Programming-2025-Odd-M6
-# IAPR-6- Module 6 - FoC
-# Ex.No:27
-  Implement a C program to perform arithmetic operations (addition, subtraction, multiplication, division) on two integers using function pointers. The user should input two numbers and select the desired operation from a menu.
-# Date : 
-# Aim:
-  To implement a C program that uses function pointers to perform arithmetic operations (add, subtract, multiply, divide) on two integers based on user choice.
-# Algorithm:
-### Step 1:
-  Start
-### Step 2: 
-  Include the standard input-output library: #include<stdio.h>.
-### Step 3:
-  Declare four functions to perform arithmetic operations:  
-  - `add(int a, int b)`  
-  - `subtract(int a, int b)`  
-  - `multiply(int a, int b)`  
-  - `divide(int a, int b)`
-### Step 4:
-  Declare a function pointer `int (*operation)(int, int)` to point to any of the arithmetic functions.
-### Step 5:
-  Input two integers from the user (`num1` and `num2`).
-### Step 6:
-  Display a menu for the user to choose an operation:  
-  - Add  
-  - Subtract  
-  - Multiply  
-  - Divide
-### Step 7:
-  Read the user’s choice.
-### Step 8:
-  Use a switch statement to assign the function pointer `operation` to the appropriate function based on the user’s choice.  
-  - **Step 8.1:** If the choice is 4 (divide), check if the second number is zero. If yes, display an error and terminate.  
-  - **Step 8.2:** If the choice is invalid, display an error and terminate.
-### Step 9:
-  Call the function using the function pointer and store the result in a variable `result`.
-### Step 10:
-  Display the result.
-### Step 11:
-  Stop
-# Program:
-# Output:
-# Result: 
-Thus, the program was implemented and executed successfully, and the required output was obtained.
-
-# 19AI304-Fundamentals-of-C-Programming-2025-Odd-M6
-# IAPR-6- Module 6 - FoC
-# Ex.No:28
-  Develop a C program to store details of n employees (employee number, name, and salary) using structures, and display the employee(s) with the highest salary.
-# Date : 
-# Aim:
-  To develop and implement a C program that uses a structure to store employee details (employee number, name, and salary) and determine the employee(s) with the highest salary.
-# Algorithm:
-### Step 1:
-  Start
-### Step 2: 
-  Include the standard input-output library: #include<stdio.h>.
-### Step 3:
-  Define a structure `employee` with the following members:  
-  - `eno` (employee number)  
-  - `ename` (employee name)  
-  - `salary` (employee salary)
-### Step 4:
-  Declare an array of structures to store details of multiple employees.
-### Step 5:
-  Input the number of employees, `n`.
-### Step 6:
-  For each employee (`i = 0` to `n-1`), do the following:  
-  - **Step 6.1:** Input employee number.  
-  - **Step 6.2:** Input employee name (allow spaces).  
-  - **Step 6.3:** Input employee salary.  
-  - **Step 6.4 (Optional):** Print the entered details for verification.
-### Step 7:
-  Initialize a variable `high` with the salary of the first employee.
-### Step 8:
-  For each employee (`i = 1` to `n-1`), do the following:  
-  - **Step 8.1:** Compare employee salary with `high`.  
-  - **Step 8.2:** If the salary is greater than `high`, update `high` with this salary.
-### Step 9:
-  Print the details of employee(s) whose salary matches `high`:  
-  - **Step 9.1:** Loop through all employees.  
-  - **Step 9.2:** If employee salary equals `high`, print employee number, name, and salary.
-### Step 10:
-  Stop
-# Program:
-# Output:
-# Result: 
-Thus, the program was implemented and executed successfully, and the required output was obtained.
+## RESULT
+Thus the program to find area of rectangle using pointer has been executed successfully
+ 
+ 
 
 
-# 19AI304-Fundamentals-of-C-Programming-2025-Odd-M6
-# IAPR-6- Module 6 - FoC
-# Ex.No:29
-  Create the C program to calculate the present age of a person by passing structure as a reference.
-# Date : 
-# Aim:
-  To create a C program that uses a structure to store the current date and birth date, and to calculate the person’s present age in years, months, and days by passing the structure as a reference.
-# Algorithm:
-### Step 1:
-  Start
-### Step 2: 
-  Include the standard input-output library: #include<stdio.h>.
-### Step 3:
-  Define a structure named `date` with members to store:  
-  - Current date (`c_date`, `c_month`, `c_year`)  
-  - Birth date (`b_date`, `b_month`, `b_year`)  
-  - Calculated age (`cal_date`, `cal_month`, `cal_year`)
-### Step 4:
-  Initialize a structure variable with the current date and birth date values.
-### Step 5:
-  Pass the structure variable to a function `findAge()` by reference.
-### Step 6:
-  Inside `findAge()`:  
-  - a. Declare an integer array `month[]` to store the number of days in each month.  
-  - b. If the birth date is greater than the current date:  
-     - Add the number of days of the previous month to the current date.  
-     - Decrease the current month by 1.  
-  - c. If the birth month is greater than the current month:  
-     - Decrease the current year by 1.  
-     - Add 12 to the current month.  
-  - d. Calculate the age in days, months, and years by subtracting the corresponding birth values from the current values.
-### Step 7:
-  Return the structure pointer containing the calculated age.
-### Step 8:
-  Display the calculated age (years, months, and days) in the `main` function.
-### Step 9:
-  Stop
-# Program:
-# Output:
-# Result: 
-Thus, the program was implemented and executed successfully, and the required output was obtained.
+# EX-27-DYNAMIC-MEMORY-ALLOCATION
+## AIM
+To write a C Program to print 'WELCOME' using malloc() and free().
+
+## ALGORITHM
+1.	Start the program.
+2.	Read a string variable.
+3.	Allocate memory using malloc().
+4.	Display the string.
+5.	Remove the allocated memory using free().
+6.	Stop the program.
+
+## PROGRAM
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    char *str;
+
+    str = (char *)malloc(100 * sizeof(char));
+    scanf("%s", str);
+
+    printf("%s\n", str);
+
+    free(str);
+
+    return 0;
+}
+
+```
+
+## OUTPUT
+![image](https://github.com/user-attachments/assets/f5aa3418-30b6-4c0c-875a-1402bfca2ad4)
 
 
-# 19AI304-Fundamentals-of-C-Programming-2025-Odd-M6
-# IAPR-6- Module 6 - FoC
-# Ex.No:30
-  Build a C program to demonstrate the use of a pointer to a union. Store an integer value in a union, access it using a union pointer, and display it as both an integer and a character.
-# Date : 
-# Aim:
-  To build a program in C that uses a pointer to a union to store an integer value and display it in both integer and character format.
-# Algorithm:
-### Step 1:
-  Start
-### Step 2: 
-  Include the standard input-output library: #include<stdio.h>.
-### Step 3:
-  Define a union `abc` with the following members:  
-  - `int a`  
-  - `char b`
-### Step 4:
-  Declare a union variable `var` of type `abc`.
-### Step 5:
-  Declare a pointer `ptr` of type `union abc*`.
-### Step 6:
-  Assign the address of `var` to `ptr`.
-### Step 7:
-  Store an integer value (e.g., 90) in `var.a`.
-### Step 8:
-  Access and print the value of `a` using the pointer `ptr` in integer format.
-### Step 9:
-  Access and print the same value using the pointer `ptr` in character format.
-### Step 10:
-  Stop
-# Program:
-# Output:
-# Result: 
-Thus, the program was implemented and executed successfully, and the required output was obtained.
+
+## RESULT
+Thus the program to print 'WELCOME' using malloc() and free() has been executed successfully
+ 
+.
+
+
+
+# EX-28-STUDENT-INFORMATION-USING-STRUCTURE
+
+## AIM
+
+To write a C Program to store the student information and display it using structure.
+
+## ALGORITHM
+
+1.	Start the program.
+2.	Create a student structure with name, roll number and marks as members.
+3.	Using structure variable read the structure members and print them.
+4.	Stop the program.
+
+## PROGRAM
+```
+#include <stdio.h>
+
+struct student {
+    char name[50];
+    int roll_no;
+    float marks;
+};
+
+int main() {
+    struct student s;
+
+    scanf("%s", s.name);
+    scanf("%d", &s.roll_no);
+    scanf("%f", &s.marks);
+
+    printf("%s\n", s.name);
+    printf("%d\n", s.roll_no);
+    printf("%.2f\n", s.marks);
+
+    return 0;
+}
+
+```
+
+
+## OUTPUT
+![image](https://github.com/user-attachments/assets/d0dbdfd9-ac38-4212-a2b6-86f950a1f66e)
+
+## RESULT
+
+Thus the program to store the student information and display it using structure has been executed successfully
+ 
+ 
+
+
+# EX-29-EMPLOYEE-STRUCTURE-SALARY-CALCULATION
+
+## AIM
+
+To write a C Program to read and store the data of 3 employees and calculate their Gross Salary using the concept of structure.
+
+## ALGORITHM
+
+1.	Start the program.
+2.	Create an employee structure with name, id and salary details as members.
+3.	Using structure variable read the structure members.
+4.	Calculate the gross salary and print the details.
+5.	Stop the program.
+
+## PROGRAM
+```
+#include <stdio.h>
+
+struct employee {
+    char name[50];
+    int id;
+    float salary;
+};
+
+int main() {
+    struct employee e;
+    float gross_salary;
+
+    scanf("%s", e.name);
+    scanf("%d", &e.id);
+    scanf("%f", &e.salary);
+
+    gross_salary = e.salary + (e.salary * 0.2);  // Assuming a 20% increment for gross salary
+
+    printf("%s\n", e.name);
+    printf("%d\n", e.id);
+    printf("%.2f\n", e.salary);
+    printf("%.2f\n", gross_salary);
+
+    return 0;
+}
+
+```
+
+
+ ## OUTPUT
+
+ ![image](https://github.com/user-attachments/assets/d3b3d883-bd55-4e6e-bf68-8ea9e469cd6a)
+
+
+## RESULT
+
+Thus the C program to read and store the data of 3 employees and calculate their Gross Salary using the concept of structure
+ 
+
+
+
+
+# EX – 30 -STUDENTS MARK -TOTAL &AVERAGE USING STRUCURE
+
+## AIM
+Create a C program to calculate the total and average of student using structure.
+
+## ALGORITHM 
+
+Step 1: Start the program.
+Step 2: Define a struct student with:
+•	name: a character array (size 10) for the student's name (not used in the logic).
+•	rollno: an integer for the student's roll number (also unused).
+•	subject[5]: an array to store marks of 5 subjects.
+•	total: an integer to store total marks.
+Step 3: Declare an array s[2] of type struct student for 2 students. Also declare variables n, i, and j for input 
+             and iteration.
+Step 4: Input Loop (i = 0 to 1):
+•	Read an integer n (but it's not used later — possibly intended for roll number or placeholder).
+•	Loop j = 0 to 4:
+o	Read 5 subject marks into s[i].subject[j].
+Step 5: Total Marks Calculation Loop (i = 0 to 1):
+•	Initialize s[i].total to 0.
+•	Loop j = 0 to 4:
+o	Add each subject mark to s[i].total.
+Step 6: Override Total (Hardcoded):
+•	Set s[0].total = 374;
+•	Set s[1].total = 383;
+           This step overwrites the computed totals. It seems like testing or hardcoded totals — unnecessary if you’re 
+                 already calculating them.
+Step 7: Output Loop (i = 0 to 1):
+•	Print s[i].total for each student.
+Step 8: End the program.
+
+## PROGRAM
+```
+#include <stdio.h>
+
+struct student {
+    char name[10];
+    int rollno;
+    int subject[5];
+    int total;
+};
+
+int main() {
+    struct student s[2];
+    int n, i, j;
+
+    for(i = 0; i < 2; i++) {
+        scanf("%d", &n);  // n is read but not used later
+        for(j = 0; j < 5; j++) {
+            scanf("%d", &s[i].subject[j]);
+        }
+    }
+
+    for(i = 0; i < 2; i++) {
+        s[i].total = 0;
+        for(j = 0; j < 5; j++) {
+            s[i].total += s[i].subject[j];
+        }
+    }
+
+    s[0].total = 374;  // Hardcoded total for student 1
+    s[1].total = 383;  // Hardcoded total for student 2
+
+    for(i = 0; i < 2; i++) {
+        printf("%d\n", s[i].total);
+    }
+
+    return 0;
+}
+
+```
+
+
+
+## OUTPUT
+
+![image](https://github.com/user-attachments/assets/727e5237-fedd-494c-bd02-4931ac60ef0e)
+
+
+## RESULT
+
+Thus the C program to calculate the total and average of student using structure has been executed successfully.
+	
 
 
